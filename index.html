@@ -1,28 +1,141 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Under Maintenance</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; default-src 'none'; form-action 'self'; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com; frame-src 'self'; frame-ancestors 'none'; img-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net; media-src 'self'; script-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com;">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-        <!-- css -->
-        <link rel="stylesheet" href="maintenance.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <!-- analytics code -->
-        <script src="analytics_maintenance.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div>
-                <h1>Sorry!</h1>
-                <p>This website is currently under maintenance. We will be back online soon.</p>
-            </div>
-            <div class="picture_bg">
-                <!-- Please retain the copyright tag below if using this image  -->
-                <p><small>Image <i class="far fa-copyright"></i> corklifebyhilary</small></p>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We'll Be Right Back | Maintenance Mode</title>
+    <style>
+        /* CSS Variables for easy color customization */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --primary-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+        }
+
+        .icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #f59e0b; /* Amber status color */
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        .footer {
+            margin-top: 32px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- SVG Gear Icon -->
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l5.654-4.654m0 0l3.03-2.496c.14-.468.382-.89.766-1.208m0 0L21 3.75l-3.75 3.75M13.5 10.5l-2.086 2.086" />
+            </svg>
         </div>
-        <!-- font awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    </body>
+
+        <h1>අලුත්වැඩියාවක් සිදුකෙරේ</h1>
+        <p>අපගේ වෙබ් අඩවියේ පද්ධති යාවත්කාලීන කිරීමක් සිදුකරමින් පවතී. ඉතා ඉක්මනින් නැවත ඔබ වෙත පැමිණෙන්නෙමු!</p>
+
+        <div class="status-badge">
+            <span class="dot"></span>
+            <span>Maintenance in progress</span>
+        </div>
+
+        <div class="footer">
+            හදිසි අවශ්‍යතාවයක් සඳහා: <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+        </div>
+    </div>
+
+</body>
 </html>
